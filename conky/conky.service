@@ -1,0 +1,12 @@
+[Unit]
+Description=Run conky
+After=graphical-session.target
+Requires=graphical-session.target
+
+[Service]
+Type=simple
+ExecStartPre=sleep 5
+ExecStart=/usr/bin/conky
+
+[Install]
+WantedBy=default.target
