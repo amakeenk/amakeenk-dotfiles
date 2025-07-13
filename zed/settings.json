@@ -1,0 +1,75 @@
+{
+  "icon_theme": "Catppuccin Macchiato",
+  "vim_mode": false,
+  "ui_font_size": 14,
+  "buffer_font_size": 13,
+  "autosave": "on_focus_change",
+  "restore_on_startup": "none",
+  "base_keymap": "VSCode",
+  "show_whitespaces": "all",
+  "ui_font_family": "FiraCode Nerd Font Mono",
+  "buffer_font_family": "FiraCode Nerd Font Mono",
+  "format_on_save": "off",
+  "remove_trailing_whitespace_on_save": false,
+  "editor": {
+    "ensure_final_newline_on_save": true
+  },
+  "theme": {
+    "mode": "system",
+    "light": "Kanagawa Wave",
+    "dark": "Kanagawa"
+  },
+  "tabs": {
+    "file_icons": true,
+    "git_status": true,
+    "show_close_button": "hover",
+    "show_diagnostics": "all",
+    "activate_on_close": "history"
+  },
+  "preview_tabs": { "enabled": false },
+  "tab_bar": {
+    "show": true,
+    "show_nav_history_buttons": false,
+    "show_tab_bar_buttons": true
+  },
+  "diagnostics": {
+    "inline": {
+      "enabled": true,
+      "update_debounce_ms": 150,
+      "padding": 4,
+      "min_column": 0,
+      "max_severity": null
+    }
+  },
+  "telemetry": {
+    "diagnostics": false,
+    "metrics": false
+  },
+  "terminal": {
+    "copy_on_select": true,
+    "font_size": 12,
+    "font_family": "FiraCode Nerd Font Mono"
+  },
+  "lsp": {
+    "ruff": {
+      "initialization_options": {
+        "settings": {
+          "lineLength": 80,
+          "lint": {
+            "extendSelect": ["I"]
+          }
+        }
+      }
+    }
+  },
+  "languages": {
+    "Python": {
+      "language_servers": ["ruff"],
+      "format_on_save": "off"
+    },
+    "YAML": {
+      "formatter": "language_server",
+      "format_on_save": "off"
+    }
+  }
+}
