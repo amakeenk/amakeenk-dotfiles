@@ -1,0 +1,112 @@
+{
+  "display": {
+    "separator": " > ",
+    "constants": ["──────────────────────────────"],
+  },
+  "modules": [
+    "break",
+    {
+      "type": "custom",
+      "format": "┌{$1}{$1}┐",
+      "outputColor": "90",
+    },
+    {
+      "type": "os",
+      "key": "",
+      "keyColor": "94",
+    },
+    {
+      "type": "kernel",
+      "key": "",
+      "keyColor": "39",
+    },
+    {
+      "type": "packages",
+      "key": "󰏖",
+      "keyColor": "33",
+    },
+    "break",
+    {
+      "type": "shell",
+      "key": "",
+      "keyColor": "94",
+      "format": "{1} {#2}[{4}] {#2}",
+    },
+    {
+      "type": "terminal",
+      "key": "",
+      "keyColor": "39",
+      "format": "{1} {#2}[{6}]",
+    },
+    "break",
+    {
+      "type": "wm",
+      "key": "󱍜",
+      "keyColor": "34",
+    },
+    {
+      "type": "wmtheme",
+      "key": "󰉼",
+      "keyColor": "33",
+    },
+    {
+      "type": "icons",
+      "key": "",
+      "keyColor": "93",
+    },
+    "break",
+    {
+      "type": "host",
+      "key": "󰌢",
+      "keyColor": "92",
+    },
+    {
+      "type": "display",
+      "key": "󰹑",
+      "keyColor": "32",
+    },
+    {
+      "type": "cpu",
+      "key": "󰍛",
+      "keyColor": "96",
+    },
+    {
+      "type": "gpu",
+      "key": "󰢮",
+      "keyColor": "96",
+    },
+    "break",
+    {
+      "type": "memory",
+      "key": "",
+      "keyColor": "36",
+    },
+    {
+      "type": "disk",
+      "key": "󰋊",
+    },
+
+    "break",
+    {
+      "type": "command",
+      "key": "󱤦",
+      "keyColor": "39",
+      "text": "uptime -p | sed 's/up/В работе:/; s/hours/часов/; s/hour/час/; s/minutes/минут/; s/minute/минута/'",
+      "format": "{1}",
+    },
+    {
+      "type": "command",
+      "key": "󱦟",
+      "keyColor": "31",
+      "text": "birth_install=$(stat -c %W /); current=$(date +%s); time_progression=$((current - birth_install)); days_difference=$((time_progression / 86400)); echo $days_difference день",
+      "format": "Всего: {1}",
+    },
+    {
+      "type": "custom",
+      "format": "└{$1}{$1}┘",
+      "outputColor": "90",
+    },
+    "colors",
+    "break",
+  ],
+}
