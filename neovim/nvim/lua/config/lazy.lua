@@ -24,11 +24,6 @@ vim.opt.rtp:prepend(lazypath)
 require("lazy").setup({
     spec = {
         {
-            "catppuccin/nvim",
-            name = "catppuccin",
-            priority = 999
-        },
-        {
             "rebelot/kanagawa.nvim",
             name = "kanagawa",
             priority = 1000
@@ -51,5 +46,5 @@ require("lazy").setup({
         },
 
     },
-    checker = { enabled = true },
+    checker = { enabled = false },
 })
