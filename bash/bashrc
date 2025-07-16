@@ -92,6 +92,7 @@ alias task_watch='neowatch -n 5 -d girar-show'
 alias rm='rm -v'
 alias girarbuild='ssh girar build'
 alias girarrun='ssh girar task run'
+alias calc='_(){ awk "BEGIN{print $*}";};_'
 
 eval "$(starship init bash)"
 eval "$(fzf --bash)"
