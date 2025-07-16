@@ -82,6 +82,7 @@ alias gdf='git diff'
 alias glg='git log -p'
 alias grst='git reset --hard'
 alias gcl='git clone'
+alias gad='git add'
 alias gplsm='git pull && git submodule update --init --recursive'
 alias vhost='sudo vim /etc/hosts'
 alias svim='sudo vim'
@@ -89,6 +90,8 @@ alias cleannodepslibs='agrp $(apt-cache list-nodeps | grep -E "devel|^lib[^-]*$"
 alias ncdu='ncdu --color dark'
 alias task_watch='neowatch -n 5 -d girar-show'
 alias rm='rm -v'
+alias girarbuild='ssh girar build'
+alias girarrun='ssh girar task run'
 
 eval "$(starship init bash)"
 eval "$(fzf --bash)"
