@@ -94,6 +94,7 @@ alias cleannodepslibs='agrp $(apt-cache list-nodeps | grep -E "devel|^lib[^-]*$"
 alias ncdu='ncdu --color dark'
 alias task_watch='neowatch -n 5 -d girar-show'
 alias rm='rm -v'
+alias cp='xcp'
 alias girarbuild='ssh girar build'
 alias girarrun='ssh girar task run'
 alias calc='_(){ awk "BEGIN{print $*}";};_'
