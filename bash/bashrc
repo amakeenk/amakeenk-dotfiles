@@ -58,7 +58,10 @@ function y() {
 	rm -f -- "$tmp"
 }
 
-alias ll='ls -l'
+alias ls='eza --icons --header --group-directories-first'
+alias ll='ls -la'
+alias l='ls -l'
+alias ltree='eza -T --level '
 alias df='duf'
 alias u='clean_old_tasks && sudo apt-get update'
 alias ud='u && sudo apt-get -V dist-upgrade'
@@ -83,6 +86,7 @@ alias glg='git log -p'
 alias grst='git reset --hard'
 alias gcl='git clone'
 alias gad='git add'
+alias gcm='git commit -m'
 alias gplsm='git pull && git submodule update --init --recursive'
 alias vhost='sudo vim /etc/hosts'
 alias svim='sudo vim'
