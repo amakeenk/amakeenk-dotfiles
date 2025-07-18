@@ -97,6 +97,7 @@ alias rm='rm -v'
 alias cp='xcp'
 alias girarbuild='ssh girar build'
 alias girarrun='ssh girar task run'
+alias girarls='ssh girar task ls'
 alias calc='_(){ awk "BEGIN{print $*}";};_'
 
 eval "$(starship init bash)"
