@@ -98,6 +98,9 @@ alias cp='xcp'
 alias girarbuild='ssh girar build'
 alias girarrun='ssh girar task run'
 alias girarls='ssh girar task ls'
+alias gitaltinit='ssh git.alt init-db'
+alias gitaltrm='ssh git.alt rm-db'
+alias gitaltls='ssh git.alt ls'
 alias calc='_(){ awk "BEGIN{print $*}";};_'
 
 eval "$(starship init bash)"
