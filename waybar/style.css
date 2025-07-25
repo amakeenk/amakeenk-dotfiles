@@ -1,0 +1,105 @@
+@import "matugen_colors.css";
+
+/* general */
+* {
+    font-family: "FiraCode Nerd Font Propo";
+    font-size: 14px;
+    font-weight: bold;
+    min-height: 15px;
+}
+window#waybar {
+    background: alpha(@background, 0.7);
+}
+tooltip {
+    background: alpha(@background, 0.9);
+    border-radius: 10px;
+}
+tooltip label {
+    color: @primary;
+    padding: 6px;
+}
+
+/* window module */
+#window {
+    color: @primary;
+    background: @background;
+    border-radius: 0px 0px 50px 0px;
+    padding: 0px 30px 0px 10px;
+    margin: 0px 0px 0px 0px;
+}
+
+/* workspace module */
+#workspaces {
+    background: @background;
+    padding: 5px 5px;
+    border-radius: 16px;
+    color: @primary;
+}
+#workspaces button {
+    padding: 0px 5px;
+    margin: 0px 3px;
+    border-radius: 16px;
+    color: transparent;
+    background: @secondary_container;
+    transition: all 0.3s ease-in-out;
+}
+#workspaces button.active {
+    background-color: @primary;
+    color: @secondary_container;
+    border-radius: 16px;
+    min-width: 50px;
+    background-size: 400% 400%;
+    transition: all 0.3s ease-in-out;
+}
+#workspaces button:hover {
+    background-color: @secondary;
+    color: @secondary_container;
+    border-radius: 16px;
+    min-width: 50px;
+    background-size: 400% 400%;
+}
+#workspaces button.urgent {
+    background-color: @on_error_container;
+    color: @secondary_container;
+    border-radius: 16px;
+    min-width: 50px;
+    background-size: 400% 400%;
+    transition: all 0.3s ease-in-out;
+}
+
+/* language module */
+#language {
+    color: @primary;
+    background: @background;
+    border-radius: 0px 50px 0px 0px;
+    padding: 0px 20px 0px 0px;
+}
+
+/* clock module */
+#clock {
+    color: @primary;
+    background: @background;
+    border-radius: 0px 0px 0px 50px;
+    padding: 0px 10px 0px 20px;
+}
+
+/* swaync module */
+#custom-swaync {
+    color: @primary;
+    background: @background;
+    padding: 0px 10px 0px 20px;
+    border-radius: 0px 0px 0px 50px;
+}
+
+/* tray module */
+#tray {
+    color: @primary;
+    background: @background;
+    border-radius: 0px 50px 0px 50px;
+    padding: 0px 10px 0px 20px;
+}
+#tray menu * {
+    color: @primary;
+    font-weight: normal;
+    transition: all 0.3s ease;
+}

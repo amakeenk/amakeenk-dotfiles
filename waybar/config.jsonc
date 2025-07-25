@@ -1,0 +1,65 @@
+{
+  "layer": "top",
+  "position": "top",
+  "modules-left": ["hyprland/window"],
+  "modules-center": ["hyprland/workspaces"],
+  "modules-right": ["tray", "custom/swaync", "hyprland/language", "clock"],
+  "hyprland/window": {
+    "format": "{initialTitle}",
+    "icon": true,
+    "icon-size": 15,
+  },
+  "hyprland/workspaces": {
+    "format": "{}",
+    "on-click": "activate",
+    "on-scroll-down": "hyprctl dispatch workspace e+1",
+    "on-scroll-up": "hyprctl dispatch workspace e-1",
+  },
+  "tray": {
+    "icon-size": 20,
+    "spacing": 8,
+  },
+  "custom/swaync": {
+    "tooltip": true,
+    "tooltip-format": "Left Click: Launch Notification Center\nRight Click: Do not Disturb",
+    "format": "{icon} {text}",
+    "format-icons": {
+      "notification": "",
+      "none": "",
+      "dnd-notification": "",
+      "dnd-none": "",
+      "inhibited-notification": "",
+      "inhibited-none": "",
+      "dnd-inhibited-notification": "",
+      "dnd-inhibited-none": "",
+    },
+    "return-type": "json",
+    "exec": "swaync-client -swb",
+    "on-click": "sleep 0.1 && swaync-client -t -sw",
+    "on-click-right": "swaync-client -d -sw",
+    "escape": true,
+  },
+  "hyprland/language": {
+    "format": " {}",
+    "format-en": "EN",
+    "format-ru": "RU",
+  },
+  "clock": {
+    "format": "{:%T %e.%m.%Y}",
+    "interval": 1,
+    "tooltip-format": "<tt>{calendar}</tt>",
+    "calendar": {
+      "on-scroll": 1,
+      "format": {
+        "today": "<span color='#d699b6'><b>{}</b></span>",
+      },
+    },
+    "actions": {
+      "on-scroll-up": "shift_up",
+      "on-scroll-down": "shift_down",
+      "on-click-right": "mode",
+    },
+    "timezone": "Europe/Moscow",
+    "locale": "ru_RU.UTF-8",
+  },
+}
