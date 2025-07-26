@@ -93,8 +93,8 @@
   },
   "disk": {
 	"interval": 30,
-	"format": "{specific_used:0.2f} GB/{specific_total:0.2f} GB",
-	"unit": "GB"
+	"format": "{specific_used:0.2f} GB",
+	"unit": "GiB"
   }
   
 }
