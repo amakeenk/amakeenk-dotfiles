@@ -16,3 +16,9 @@ $ cd /tmp && git clone https://github.com/Fausto-Korpsvart/Kanagawa-GKT-Theme &&
 cd Kanagawa-GKT-Theme/themes && \
 ./install.sh --tweaks black -t all -l
 ```
+
+### Configure kitty theme
+```console
+$ kitty +kitten themes --config-file-name theme.conf && \
+kill -SIGUSR1 $KITTY_PID
+```
