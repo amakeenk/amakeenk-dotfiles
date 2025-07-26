@@ -22,7 +22,7 @@
                   gnome-text-editor \
                   loupe \
                   hyprpicker \
-                  ashell \
+                  waybar \
                   eww \
                   bottom \
                   polkit-gnome \
@@ -30,7 +30,8 @@
                   hyprland-per-window-layout \
                   hyprshot \
                   hyprls \
-                  waypaper
+                  waypaper \
+                  NetworkManager-applet-gtk
 ```
 
 ```
