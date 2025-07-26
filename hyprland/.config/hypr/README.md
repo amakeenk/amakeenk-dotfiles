@@ -31,7 +31,8 @@
                   hyprshot \
                   hyprls \
                   waypaper \
-                  NetworkManager-applet-gtk
+                  NetworkManager-applet-gtk \
+                  blueman
 ```
 
 ```
