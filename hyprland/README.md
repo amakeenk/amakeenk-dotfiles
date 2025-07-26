@@ -29,7 +29,8 @@
                   totem \
                   hyprland-per-window-layout \
                   hyprshot \
-                  hyprls
+                  hyprls \
+                  waypaper
 ```
 
 ```
