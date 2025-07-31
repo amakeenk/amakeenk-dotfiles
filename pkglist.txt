@@ -1,7 +1,9 @@
 blueman
 bottom
+ddclight
 fonts-ttf-fira-code-nerd
 fonts-ttf-symbols-nerd
+fzf
 gnome-text-editor
 greetd
 hyprland
@@ -21,6 +23,8 @@ NetworkManager-applet-gtk
 nwg-look
 papirus-remix-icon-theme
 polkit-gnome
+pwvucontrol
+stow
 totem
 waybar
 waypaper
