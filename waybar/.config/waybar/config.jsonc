@@ -30,7 +30,7 @@
   "custom/swaync": {
     "tooltip": true,
     "tooltip-format": "Left Click: Launch Notification Center\nRight Click: Do not Disturb",
-    "format": "{icon} {text}",
+    "format": "{icon} {text} \\",
     "format-icons": {
       "notification": "",
       "none": "",
@@ -53,7 +53,7 @@
     "format-ru": "RU",
   },
   "clock": {
-    "format": "{:%T %e.%m.%Y}",
+    "format": "{:%T %d.%m.%Y}",
     "interval": 1,
     "tooltip-format": "<tt>{calendar}</tt>",
     "calendar": {
@@ -73,7 +73,7 @@
 
   "custom/ddclight": {
     "tooltip": false,
-    "format": " {percentage}%",
+    "format": " {percentage}% \\",
     "return-type": "json",
     "exec-if": "ddclight",
     "exec": "ddclight get --waybar",
@@ -86,20 +86,20 @@
   },
   "memory": {
     "interval": 5,
-    "format": " {used:0.1f}G/{total:0.1f}G",
+    "format": " {used:0.1f}G/{total:0.1f}G /",
     "tooltip": true,
     "tooltip-format": "Free {avail:0.1f}G\nUsed: {percentage}%\nSwap: {swapPercentage}%",
   },
   "disk": {
     "interval": 30,
-    "format": "󰋊 {specific_used:0.2f} GB",
+    "format": "󰋊 {specific_used:0.2f} GB /",
     "unit": "GiB",
   },
 
   "pulseaudio": {
     "max-volume": 150,
     "scroll-step": 5,
-    "format": "{icon} {volume}%",
+    "format": "{icon}{volume}% \\",
     "tooltip-format": "{volume}%",
     "format-muted": " ",
     "format-icons": {

@@ -3,8 +3,12 @@ version_check = false
 
 [templates.waybar]
 input_path = '~/.config/matugen/colors.css'
-output_path = '~/.config/waybar/matugen_colors.css'
+output_path = '~/.config/waybar/css/matugen_colors.css'
 
 [templates.hyprland]
 input_path = '~/.config/matugen/hyprland-colors.conf'
 output_path = '~/.config/hypr/matugen_colors.conf'
+
+[templates.wlogout]
+input_path = '~/.config/matugen/colors.css'
+output_path = '~/.config/wlogout/matugen_colors.css'

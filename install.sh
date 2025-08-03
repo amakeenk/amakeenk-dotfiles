@@ -13,7 +13,7 @@ APPS_LIST=(
     "starship"
     "swaync"
     "waybar"
-    "waypaper"
+    "wlogout"
     "wofi"
     "zed"
 )
