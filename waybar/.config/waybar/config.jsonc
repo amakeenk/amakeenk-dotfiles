@@ -1,6 +1,9 @@
 {
   "layer": "top",
   "position": "top",
+  "margin-top": 3,
+  "margin-left": 3,
+  "margin-right": 3,
   "modules-left": ["disk", "memory", "cpu", "hyprland/window"],
   "modules-center": ["hyprland/workspaces"],
   "modules-right": [
