@@ -30,7 +30,7 @@ clean_old_tasks() {
 
 changelog_add() {
     _init=$1
-    _spec=$(fd -I .spec$ .gear 2>/dev/null)
+    _spec=$(fd -I .spec$ .gear alt 2>/dev/null)
     if ! [ "${_spec}" ]; then
         echo "spec file not found"
     else
@@ -50,7 +50,12 @@ vm() {
     ssh root@192.168.1.${_ip}
 }
 
-function y() {
+task_info() {
+    _task=$1
+    xdg-open https://beta.packages.altlinux.org/ru/tasks/$_task
+}
+
+y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
 	yazi "$@" --cwd-file="$tmp"
 	IFS= read -r -d '' cwd < "$tmp"

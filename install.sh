@@ -6,6 +6,7 @@ APPS_LIST=(
     "bash"
     "bat"
     "fastfetch"
+    "fuzzel"
     "hyprland"
     "kitty"
     "matugen"
@@ -14,7 +15,6 @@ APPS_LIST=(
     "swaync"
     "waybar"
     "wlogout"
-    "wofi"
     "zed"
 )
 
