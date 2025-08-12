@@ -11,4 +11,4 @@ killall -9 hyprpaper; hyprpaper &
 killall -9 waybar; waybar &
 hyprctl reload
 
-notify-send --expire-time=1000 --print-id "Фоновое изображение изменено"
+notify-send --expire-time=3000 "Фоновое изображение изменено" "Новое изображение: ${NEW_WALLPAPER_PATH}"

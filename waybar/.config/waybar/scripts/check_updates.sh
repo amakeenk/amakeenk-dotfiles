@@ -5,4 +5,12 @@ source ~/.bashrc
 
 clean_old_tasks 2>&1 >/dev/null && \
 sudo apt-get update 2>&1 >/dev/null && \
-sudo apt-get dist-upgrade --dry-run 2>&1 | grep 'будет обновлено' | cut -d' ' -f1
+UPDATES_COUNT=$(sudo apt-get dist-upgrade --dry-run 2>&1 | grep 'будет обновлено' | cut -d' ' -f1)
+
+echo $UPDATES_COUNT
+
+if [ "$UPDATES_COUNT" -ne 0 ]; then
+    notify-send --expire-time=5000 "Доступны обновления пакетов" "Количество пакетов для обновления: ${UPDATES_COUNT}"
+else
+    notify-send --expire-time=3000 "Доступных обновлений пакетов нет"
+fi

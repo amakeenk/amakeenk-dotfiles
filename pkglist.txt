@@ -6,7 +6,6 @@ fastfetch
 firefox
 fonts-ttf-fira-code-nerd
 fonts-ttf-symbols-nerd
-fuzzel
 fzf
 gnome-text-editor
 hyprland
@@ -33,6 +32,7 @@ stow
 systemd-ssh-agent
 thunderbird
 totem
+walker
 waybar
 wl-clipboard
 wlogout
