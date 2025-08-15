@@ -27,6 +27,28 @@
     },
     "break",
     {
+      "type": "wm",
+      "key": "󱍜",
+      "keyColor": "34",
+    },
+    {
+      "type": "lm",
+      "key": "",
+      "keyColor": "34",
+    },
+    "break",
+    {
+      "type": "wmtheme",
+      "key": "󰉼",
+      "keyColor": "33",
+    },
+    {
+      "type": "icons",
+      "key": "",
+      "keyColor": "93",
+    },
+    "break",
+    {
       "type": "shell",
       "key": "",
       "keyColor": "94",
@@ -37,22 +59,6 @@
       "key": "",
       "keyColor": "39",
       "format": "{1} {#2}[{6}]",
-    },
-    "break",
-    {
-      "type": "wm",
-      "key": "󱍜",
-      "keyColor": "34",
-    },
-    {
-      "type": "wmtheme",
-      "key": "󰉼",
-      "keyColor": "33",
-    },
-    {
-      "type": "icons",
-      "key": "",
-      "keyColor": "93",
     },
     "break",
     {
