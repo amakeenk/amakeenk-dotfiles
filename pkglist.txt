@@ -19,7 +19,6 @@ hyprpaper
 hyprpicker
 hyprshot
 kitty
-loupe
 matugen
 nautilus
 NetworkManager-applet-gtk
@@ -27,6 +26,7 @@ nwg-look
 papirus-remix-icon-theme
 polkit-gnome
 pwvucontrol
+qview
 starship
 stow
 systemd-ssh-agent
