@@ -14,7 +14,6 @@ APPS_LIST=(
     "swaync"
     "walker"
     "waybar"
-    "wlogout"
     "zed"
 )
 

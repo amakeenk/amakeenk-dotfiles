@@ -3,6 +3,7 @@ bottom
 ddclight
 eza
 fastfetch
+fd
 firefox
 fonts-ttf-fira-code-nerd
 fonts-ttf-symbols-nerd
@@ -21,14 +22,18 @@ hyprshot
 kitty
 matugen
 nautilus
+neovim
+neowatch
 NetworkManager-applet-gtk
 nwg-look
 papirus-remix-icon-theme
 polkit-gnome
 pwvucontrol
 qview
+ripgrep
 starship
 stow
+swaync
 systemd-ssh-agent
 thunderbird
 totem
@@ -36,6 +41,7 @@ walker
 waybar
 wl-clipboard
 wlogout
+xcp
 x-cursor-themes-Bibata
 xdg-desktop-portal-hyprland
 zenity
