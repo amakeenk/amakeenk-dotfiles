@@ -55,6 +55,17 @@ task_info() {
     xdg-open https://beta.packages.altlinux.org/ru/tasks/$_task
 }
 
+disapprove(){
+    _task=$1
+    _subtask=$2
+    _msg="$3"
+    if [[ -z "$_task" || -z "$_subtask" || -z "$_msg" ]]; then
+        echo "error" >&2
+        return 1
+    fi
+    echo "${_msg}" | ssh girar task disapprove ${_task} ${_subtask}
+}
+
 y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
 	yazi "$@" --cwd-file="$tmp"
