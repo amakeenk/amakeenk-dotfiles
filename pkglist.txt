@@ -31,12 +31,12 @@ polkit-gnome
 pwvucontrol
 qview
 ripgrep
+showtime
 starship
 stow
 swaync
 systemd-ssh-agent
 thunderbird
-totem
 walker
 waybar
 wl-clipboard
