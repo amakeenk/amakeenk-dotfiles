@@ -8,6 +8,8 @@ if [ -r ~/.bashrc_priv ]; then
         . ~/.bashrc_priv
 fi
 
+export EDITOR=nvim
+
 shopt -s histappend
 PROMPT_COMMAND='history -a'
 export HISTCONTROL="ignoredups"
@@ -74,6 +76,14 @@ y() {
 	rm -f -- "$tmp"
 }
 
+_aichat_bash() {
+    if [[ -n "$READLINE_LINE" ]]; then
+        READLINE_LINE=$(aichat -e "$READLINE_LINE")
+        READLINE_POINT=${#READLINE_LINE}
+    fi
+}
+bind -x '"\ee": _aichat_bash'
+
 alias ls='eza --icons --header --group-directories-first'
 alias ll='ls -la'
 alias l='ls -l'
@@ -103,18 +113,23 @@ alias grst='git reset --hard'
 alias gcl='git clone'
 alias gad='git add'
 alias gcm='git commit -m'
+alias gpo='git push origin'
 alias gplsm='git pull && git submodule update --init --recursive'
 alias vhost='sudo vim /etc/hosts'
 alias svim='sudo vim'
-alias cleannodepslibs='agrp $(apt-cache list-nodeps | grep -E "devel|^lib[^-]*$" | grep -Ev "libvirt")'
-alias ncdu='ncdu --color dark'
+alias cleannodepslibs='agrp $(apt-cache list-nodeps | grep -E "devel|^lib[^-]*$|-common$" | grep -Ev "libvirt")'
 alias task_watch='neowatch -n 5 -d girar-show'
 alias rm='rm -v'
 alias cp='xcp'
 alias zed='zed-editor'
+alias vim='nvim'
 alias girarbuild='ssh girar build'
+alias girarbuildcom='ssh girar build --commit'
 alias girarrun='ssh girar task run'
 alias girarruncom='ssh girar task run --commit'
+alias girarshow='ssh girar task show'
+alias girarnew='ssh girar task new'
+alias giraradd='ssh girar task add'
 alias girarls='ssh girar task ls'
 alias gitaltinit='ssh git.alt init-db'
 alias gitaltrm='ssh git.alt rm-db'
@@ -125,8 +140,18 @@ eval "$(starship init bash)"
 eval "$(fzf --bash)"
 eval "$(zoxide init --cmd cd bash)"
 
-alias vim=nvim
-export EDITOR=vim
+if [[ -z "$ZELLIJ" ]]; then
+    if [[ "$ZELLIJ_AUTO_ATTACH" == "true" ]]; then
+        zellij attach -c
+    else
+        zellij
+    fi
+
+    if [[ "$ZELLIJ_AUTO_EXIT" == "true" ]]; then
+        exit
+    fi
+fi
+
 
 # for kitty
 export TERM=xterm-256color

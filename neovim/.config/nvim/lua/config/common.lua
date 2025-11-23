@@ -6,7 +6,8 @@ vim.opt.mousefocus = true
 vim.opt.ignorecase = true
 vim.opt.smartcase = true
 vim.opt.laststatus = 2
-vim.opt.clipboard = "unnamedplus"
+
+vim.opt.clipboard:append("unnamedplus")
 
 vim.opt.colorcolumn = "80"
 

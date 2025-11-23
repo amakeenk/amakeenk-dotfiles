@@ -1,4 +1,14 @@
 {
+  "agent": {
+    "play_sound_when_agent_done": true
+  },
+  "agent_servers": {
+    "qwen": {
+      "command": "qwen",
+      "args": ["--experimental-acp"],
+      "env": {}
+    }
+  },
   "icon_theme": "Catppuccin Macchiato",
   "vim_mode": false,
   "ui_font_size": 14,
@@ -17,7 +27,7 @@
   "theme": {
     "mode": "system",
     "light": "Kanagawa Wave",
-    "dark": "Kanagawa"
+    "dark": "Kanagawa Wave"
   },
   "tabs": {
     "file_icons": true,
