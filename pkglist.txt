@@ -44,5 +44,6 @@ wlogout
 xcp
 x-cursor-themes-Bibata
 xdg-desktop-portal-hyprland
+zellij
 zenity
 zoxide
