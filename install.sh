@@ -15,6 +15,7 @@ APPS_LIST=(
     "walker"
     "waybar"
     "zed"
+    "zellij"
 )
 
 ARG=$1

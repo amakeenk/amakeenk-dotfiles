@@ -68,6 +68,7 @@ disapprove(){
     echo "${_msg}" | ssh girar task disapprove ${_task} ${_subtask}
 }
 
+# yazi
 y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
 	yazi "$@" --cwd-file="$tmp"
@@ -76,6 +77,7 @@ y() {
 	rm -f -- "$tmp"
 }
 
+# aichat
 _aichat_bash() {
     if [[ -n "$READLINE_LINE" ]]; then
         READLINE_LINE=$(aichat -e "$READLINE_LINE")
@@ -130,28 +132,17 @@ alias girarruncom='ssh girar task run --commit'
 alias girarshow='ssh girar task show'
 alias girarnew='ssh girar task new'
 alias giraradd='ssh girar task add'
+alias girardel='ssh girar task delsub'
 alias girarls='ssh girar task ls'
 alias gitaltinit='ssh git.alt init-db'
 alias gitaltrm='ssh git.alt rm-db'
 alias gitaltls='ssh git.alt ls'
+alias zj='zellij'
 alias calc='_(){ awk "BEGIN{print $*}";};_'
 
 eval "$(starship init bash)"
 eval "$(fzf --bash)"
 eval "$(zoxide init --cmd cd bash)"
-
-if [[ -z "$ZELLIJ" ]]; then
-    if [[ "$ZELLIJ_AUTO_ATTACH" == "true" ]]; then
-        zellij attach -c
-    else
-        zellij
-    fi
-
-    if [[ "$ZELLIJ_AUTO_EXIT" == "true" ]]; then
-        exit
-    fi
-fi
-
 
 # for kitty
 export TERM=xterm-256color

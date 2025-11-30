@@ -1,3 +1,4 @@
+aichat
 blueman
 bottom
 ddclight
@@ -44,6 +45,8 @@ wlogout
 xcp
 x-cursor-themes-Bibata
 xdg-desktop-portal-hyprland
+yazi
+zed
 zellij
 zenity
 zoxide
