@@ -68,6 +68,12 @@ disapprove(){
     echo "${_msg}" | ssh girar task disapprove ${_task} ${_subtask}
 }
 
+disapprove_revoke(){
+    _task=$1
+    _subtask=$2
+    ssh girar task disapprove --revoke ${_task} ${_subtask}
+}
+
 # yazi
 y() {
 	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
