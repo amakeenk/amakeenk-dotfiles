@@ -143,6 +143,8 @@ alias girarls='ssh girar task ls'
 alias gitaltinit='ssh git.alt init-db'
 alias gitaltrm='ssh git.alt rm-db'
 alias gitaltls='ssh git.alt ls'
+alias gut='gear-update-tag -avc'
+alias gct='gear-create-tag'
 alias zj='zellij'
 alias calc='_(){ awk "BEGIN{print $*}";};_'
 
