@@ -3,6 +3,17 @@ require("neo-tree").setup {
     window = {
         width = 70,
         mappings = {
+            ["<cr>"] = function(state)
+                local node = state.tree:get_node()
+                if node then
+                    if node.type == 'file' then
+                        vim.api.nvim_command('tabedit ' .. node.path)
+                    else
+                        -- For directories, call the 'open' command from the state
+                        state.commands.open(state)
+                    end
+                end
+            end,
             ["P"] = {
                 "toggle_preview",
                 config = {

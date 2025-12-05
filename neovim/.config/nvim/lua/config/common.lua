@@ -18,3 +18,10 @@ vim.opt.softtabstop = 4
 vim.opt.smarttab = true
 vim.opt.smartindent = true
 vim.opt.autoindent = true
+
+vim.api.nvim_create_autocmd("VimEnter", {
+  callback = function()
+    vim.cmd("Neotree focus")
+  end,
+})
+
