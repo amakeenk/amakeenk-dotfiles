@@ -21,7 +21,9 @@ vim.opt.autoindent = true
 
 vim.api.nvim_create_autocmd("VimEnter", {
   callback = function()
-    vim.cmd("Neotree focus")
+    if vim.fn.argc() == 0 then
+      vim.cmd("Neotree focus")
+    end
   end,
 })
 
