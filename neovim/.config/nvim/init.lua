@@ -3,6 +3,7 @@ require("config.common")
 require("config.keymaps")
 require("config.lsp")
 require("config.lazy")
+require("config.cmp")
 
 -- plugins
 require("plugins.kanagawa-theme")

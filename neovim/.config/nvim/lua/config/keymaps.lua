@@ -11,3 +11,8 @@ vim.keymap.set('n', '<leader><Right>', 'gt', { desc = 'Next Tab' })
 vim.keymap.set({'n','v'}, '<C-c>', '"+y')  -- копировать в системный буфер
 vim.keymap.set({'n','v'}, '<C-v>', '"+p')  -- вставить из системного буфера
 
+-- Diagnostics
+vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, { desc = "Go to previous diagnostic" })
+vim.keymap.set('n', ']d', vim.diagnostic.goto_next, { desc = "Go to next diagnostic" })
+vim.keymap.set('n', '<leader>d', vim.diagnostic.open_float, { desc = "Show line diagnostics" })
+

@@ -14,6 +14,15 @@ vim.lsp.config['pylsp'] = {
     cmd = { 'pylsp' },
     filetypes = { 'python' },
     root_markers = { 'pyproject.toml', 'setup.py', '.git' },
+    settings = {
+        pylsp = {
+            plugins = {
+                pycodestyle = { enabled = false },
+                pyflakes = { enabled = false },
+                mccabe = { enabled = false },
+            }
+        }
+    }
 }
 
 vim.lsp.config['ruff'] = {
@@ -38,3 +47,17 @@ vim.lsp.config['ruff'] = {
 vim.lsp.enable('pylsp')
 vim.lsp.enable('ruff')
 
+vim.diagnostic.config({
+    virtual_text = true,
+    signs = {
+        text = {
+            [vim.diagnostic.severity.ERROR] = "",
+            [vim.diagnostic.severity.WARN]  = "",
+            [vim.diagnostic.severity.INFO]  = "",
+            [vim.diagnostic.severity.HINT]  = "💡",
+        },
+    },
+    underline = true,
+    update_in_insert = false,
+    severity_sort = true,
+})
