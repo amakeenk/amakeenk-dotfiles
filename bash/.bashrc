@@ -3,11 +3,6 @@ if [ -r /etc/bashrc ]; then
         . /etc/bashrc
 fi
 
-# import private bashrc
-if [ -r ~/.bashrc_priv ]; then
-        . ~/.bashrc_priv
-fi
-
 export EDITOR=nvim
 
 shopt -s histappend
@@ -139,6 +134,7 @@ alias girarshow='ssh girar task show'
 alias girarnew='ssh girar task new'
 alias giraradd='ssh girar task add'
 alias girardel='ssh girar task delsub'
+alias girardeps='ssh girar task deps'
 alias girarls='ssh girar task ls'
 alias gitaltinit='ssh git.alt init-db'
 alias gitaltrm='ssh git.alt rm-db'
@@ -147,6 +143,7 @@ alias gut='gear-update-tag -avc'
 alias gct='gear-create-tag'
 alias zj='zellij'
 alias calc='_(){ awk "BEGIN{print $*}";};_'
+alias qwen='qwen -i "Отвечай всегда на русском языке."'
 
 eval "$(starship init bash)"
 eval "$(fzf --bash)"
@@ -154,3 +151,9 @@ eval "$(zoxide init --cmd cd bash)"
 
 # for kitty
 export TERM=xterm-256color
+
+# import private bashrc
+if [ -r ~/.bashrc_priv ]; then
+        . ~/.bashrc_priv
+fi
+
