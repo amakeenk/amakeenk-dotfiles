@@ -44,6 +44,8 @@ require("lazy").setup({
                 "3rd/image.nvim",
             }
         },
+        "neovim/nvim-lspconfig",
+        "j-hui/fidget.nvim",
     },
     checker = { enabled = false },
 })
