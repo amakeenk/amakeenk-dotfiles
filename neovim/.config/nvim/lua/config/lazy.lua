@@ -58,6 +58,23 @@ require("lazy").setup({
                 "saadparwaiz1/cmp_luasnip",
             },
         },
+        {
+            "folke/which-key.nvim",
+            event = "VeryLazy",
+            opts = {}
+        },
+        {
+            'nvim-telescope/telescope.nvim',
+            tag = '0.1.6',
+            dependencies = {
+                'nvim-lua/plenary.nvim',
+                {
+                    'nvim-telescope/telescope-fzf-native.nvim',
+                    build = 'make'
+                }
+            }
+        },
+        'echasnovski/mini.icons',
     },
     checker = { enabled = false },
 })
