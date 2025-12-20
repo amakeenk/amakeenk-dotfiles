@@ -89,6 +89,7 @@ require("lazy").setup({
         },
         require('plugins.comment'),
         require('plugins.bufferline'),
+        require('plugins.yazi'),
     },
     checker = { enabled = false },
 })
