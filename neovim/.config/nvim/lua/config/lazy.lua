@@ -86,6 +86,12 @@ require("lazy").setup({
             }
         },
         'echasnovski/mini.icons',
+        {
+            "MeanderingProgrammer/render-markdown.nvim",
+            config = function()
+                require('render-markdown').setup({})
+            end
+        },
     },
     checker = { enabled = false },
 })
