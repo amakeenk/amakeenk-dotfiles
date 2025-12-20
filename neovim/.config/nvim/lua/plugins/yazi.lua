@@ -1,6 +1,6 @@
 return {
   "mikavilpas/yazi.nvim",
-  dependencies = { 
+  dependencies = {
     "nvim-lua/plenary.nvim",
   },
   opts = {
@@ -13,7 +13,7 @@ return {
 
     -- Персонализированные настройки для yazi
     yazi_floating_window_winblend = 0, -- прозрачность фона окна (0-100)
-    
+
     -- Маппинги внутри yazi (опционально)
     keymaps = {
       -- По умолчанию плагин использует 'gz' для запуска yazi
@@ -26,9 +26,9 @@ return {
       -- toggle_preview = { "space", desc = "Toggle preview in yazi" },
 
       -- Заменить текущий буфер выбранным файлом
-      -- use_yazi_to_replace_current_buffer = { 
-      --   "<C-o>", 
-      --   desc = "Use yazi to replace current buffer" 
+      -- use_yazi_to_replace_current_buffer = {
+      --   "<C-o>",
+      --   desc = "Use yazi to replace current buffer"
       -- },
     },
 
@@ -39,10 +39,13 @@ return {
     additional_yazi_args = {},
   },
   keys = {
-    { 
-      "gz", 
-      "<cmd>Yazi<CR>", 
-      desc = "Open yazi file manager" 
+    {
+      "gz",
+      "<cmd>Yazi<CR>",
+      desc = "Open yazi file manager"
     },
   },
+  config = function(_, opts)
+    require('yazi').setup(opts)
+  end
 }
