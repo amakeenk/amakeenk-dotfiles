@@ -70,11 +70,6 @@ require("lazy").setup({
             },
         },
         {
-            "folke/which-key.nvim",
-            event = "VeryLazy",
-            opts = {}
-        },
-        {
             'nvim-telescope/telescope.nvim',
             tag = '0.1.6',
             dependencies = {
