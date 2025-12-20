@@ -88,6 +88,7 @@ require("lazy").setup({
             end
         },
         require('plugins.comment'),
+        require('plugins.bufferline'),
     },
     checker = { enabled = false },
 })
