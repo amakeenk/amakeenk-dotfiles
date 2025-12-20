@@ -14,6 +14,7 @@ APPS_LIST=(
     "swaync"
     "walker"
     "waybar"
+    "yazi"
     "zed"
     "zellij"
 )
