@@ -92,6 +92,7 @@ require("lazy").setup({
                 require('render-markdown').setup({})
             end
         },
+        require('plugins.comment'),
     },
     checker = { enabled = false },
 })
