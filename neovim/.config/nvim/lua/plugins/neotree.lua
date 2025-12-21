@@ -32,5 +32,6 @@ return {
       },
     }
     vim.keymap.set('n', '<leader>e', ':Neotree left reveal<CR>')
+    vim.keymap.set('n', '<leader>s', ':Neotree float git_status<CR>')
   end
 }
