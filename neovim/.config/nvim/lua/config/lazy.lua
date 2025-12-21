@@ -20,8 +20,6 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
     end
 end
 vim.opt.rtp:prepend(lazypath)
-
--- Теперь загрузим lazy только после добавления в rtp
 require("lazy").setup({
     require("plugins.kanagawa-theme"),
     require("plugins.lualine"),
@@ -36,5 +34,5 @@ require("lazy").setup({
     require("plugins.bufferline"),
     require("plugins.yazi"),
     require("plugins.render-markdown"),
-    checker = { enabled = false },
+    checker = { enabled = true },
 })

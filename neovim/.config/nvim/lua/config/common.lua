@@ -23,7 +23,6 @@ vim.opt.autoindent = true
 vim.api.nvim_create_autocmd("VimEnter", {
   callback = function()
     if vim.fn.argc() == 0 then
-      -- Only run Neotree if it's available (plugin is loaded)
       if vim.fn.exists(':Neotree') == 2 then
         vim.cmd("Neotree focus")
       end
