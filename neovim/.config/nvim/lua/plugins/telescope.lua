@@ -11,9 +11,11 @@ return {
   config = function()
     local telescope = require("telescope")
     local actions = require("telescope.actions")
-
+    local builtin = require("telescope.builtin")
     telescope.setup({
       defaults = {
+        file_ignore_patterns = { "node_modules", ".git/" },
+        hidden = true,
         mappings = {
           i = {
             ["<C-j>"] = actions.move_selection_next,
@@ -21,6 +23,20 @@ return {
           },
         },
       },
+      pickers = {
+        find_files = {
+          find_command = { "fd", "--type", "f", "--hidden", "--strip-cwd-prefix" },
+        }
+      },
+      extensions = {
+        fzf = {
+          fuzzy = true,
+          override_generic_sorter = true,
+          override_file_sorter = true,
+          case_mode = "smart_case",
+        }
+      }
     })
+    pcall(telescope.load_extension, "fzf")
   end
 }

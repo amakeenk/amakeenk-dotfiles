@@ -10,19 +10,17 @@ return {
   config = function()
     require("neo-tree").setup {
       close_if_last_window = false,
+      use_default_mappings = true,
       window = {
         width = 70,
         mappings = {
-          ["P"] = {
-            "toggle_preview",
-            config = {
-              use_float = false,
-              use_image_nvim = true
-            }
-          },
         }
       },
       filesystem = {
+        window = {
+          mappings = {
+          },
+        },
         filtered_items = {
           hide_dotfiles = false,
           hide_gitignored = false,
@@ -33,8 +31,6 @@ return {
         statusline = true,
       },
     }
-
-    vim.keymap.set('n', '<leader>E', ':Neotree float reveal<CR>')
     vim.keymap.set('n', '<leader>e', ':Neotree left reveal<CR>')
   end
 }
