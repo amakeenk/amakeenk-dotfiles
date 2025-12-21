@@ -39,14 +39,13 @@ return {
       }
     }
 
+    vim.lsp.config['bashls'] = {
+       cmd = { 'bash-language-server', 'start' },
+       filetypes = { 'sh', 'bash' },
+       root_markers = { '.git', '.bashrc' },
+    }
 
-    --vim.lsp.config['bashls'] = {
-    --    cmd = { 'bash-language-server', 'start' },
-    --    filetypes = { 'sh', 'bash' },
-    --    root_markers = { '.git', '.bashrc' },
-    --}
-
-    --vim.lsp.enable('bashls')
+    vim.lsp.enable('bashls')
     vim.lsp.enable('pylsp')
     vim.lsp.enable('ruff')
 
