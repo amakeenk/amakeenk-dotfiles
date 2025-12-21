@@ -32,6 +32,7 @@ require("lazy").setup({
     require("plugins.mini-icons"),
     require("plugins.comment"),
     require("plugins.bufferline"),
+    require("plugins.autopairs"),
     require("plugins.yazi"),
     require("plugins.render-markdown"),
     checker = { enabled = true },
