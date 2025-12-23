@@ -39,5 +39,6 @@ require("lazy").setup({
 	require("plugins.mason"),
 	require("plugins.conform"),
 	require("plugins.mason-conform"),
+	require("plugins.toggleterm"),
 	checker = { enabled = true },
 })
