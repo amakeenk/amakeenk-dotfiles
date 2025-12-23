@@ -40,7 +40,5 @@ require("lazy").setup({
 	require("plugins.conform"),
 	require("plugins.mason-conform"),
 	require("plugins.toggleterm"),
-	require("plugins.treesitter"),
-	require("plugins.treesitter-textobjects"),
 	checker = { enabled = true },
 })
