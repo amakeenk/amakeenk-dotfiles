@@ -15,6 +15,8 @@ vim.keymap.set("n", "<leader>fb", function() require("telescope.builtin").buffer
 vim.keymap.set("n", "<leader>fh", function() require("telescope.builtin").help_tags() end, { desc = "Find help tags" })
 vim.keymap.set("n", "<leader>fr", function() require("telescope.builtin").oldfiles() end, { desc = "Find recent files" })
 
+vim.keymap.set("n", "<C-a>", "ggVG", { desc = "Select all" })
+
 vim.keymap.set("n", "Q", ":q!<CR>", { desc = "Quit current buffer without save" })
 vim.keymap.set("n", "QA", ":qa!<CR>", { desc = "Quit all buffers without save and exit" })
 vim.keymap.set("n", "W", ":w<CR>", { desc = "Save current buffer" })
