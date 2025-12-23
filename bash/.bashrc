@@ -1,6 +1,6 @@
 # import systemd bashrc
 if [ -r /etc/bashrc ]; then
-        . /etc/bashrc
+    . /etc/bashrc
 fi
 
 export EDITOR=nvim
@@ -13,8 +13,7 @@ shopt -s cmdhist
 
 clean_old_tasks() {
     tasks=$(apt-repo | grep 'x86_64 task' | cut -d'/' -f4)
-    for _task in ${tasks}
-    do
+    for _task in ${tasks}; do
         _state="$(curl -s https://git.altlinux.org/tasks/${_task}/info.json | jq -r .state)"
         if [ "${_state}" == "EPERM" ] || [ "${_state}" == "TESTED" ]; then
             echo "Task ${_task} still available"
@@ -52,7 +51,7 @@ task_info() {
     xdg-open https://beta.packages.altlinux.org/ru/tasks/$_task
 }
 
-disapprove(){
+disapprove() {
     _task=$1
     _subtask=$2
     _msg="$3"
@@ -63,7 +62,7 @@ disapprove(){
     echo "${_msg}" | ssh girar task disapprove ${_task} ${_subtask}
 }
 
-disapprove_revoke(){
+disapprove_revoke() {
     _task=$1
     _subtask=$2
     ssh girar task disapprove --revoke ${_task} ${_subtask}
@@ -71,11 +70,11 @@ disapprove_revoke(){
 
 # yazi
 y() {
-	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
-	yazi "$@" --cwd-file="$tmp"
-	IFS= read -r -d '' cwd < "$tmp"
-	[ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
-	rm -f -- "$tmp"
+    local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+    yazi "$@" --cwd-file="$tmp"
+    IFS= read -r -d '' cwd <"$tmp"
+    [ -n "$cwd" ] && [ "$cwd" != "$PWD" ] && builtin cd -- "$cwd"
+    rm -f -- "$tmp"
 }
 
 # aichat
@@ -155,6 +154,5 @@ export TERM=xterm-256color
 
 # import private bashrc
 if [ -r ~/.bashrc_priv ]; then
-        . ~/.bashrc_priv
+    . ~/.bashrc_priv
 fi
-

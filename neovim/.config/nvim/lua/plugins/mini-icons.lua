@@ -1,6 +1,6 @@
 return {
-  'echasnovski/mini.icons',
-  config = function()
-    require('mini.icons').setup()
-  end
+	"echasnovski/mini.icons",
+	config = function()
+		require("mini.icons").setup()
+	end,
 }

@@ -21,12 +21,11 @@ vim.opt.autoindent = true
 
 -- Auto command to open neo-tree when vim starts with no files
 vim.api.nvim_create_autocmd("VimEnter", {
-  callback = function()
-    if vim.fn.argc() == 0 then
-      if vim.fn.exists(':Neotree') == 2 then
-        vim.cmd("Neotree focus")
-      end
-    end
-  end,
+	callback = function()
+		if vim.fn.argc() == 0 then
+			if vim.fn.exists(":Neotree") == 2 then
+				vim.cmd("Neotree focus")
+			end
+		end
+	end,
 })
-
