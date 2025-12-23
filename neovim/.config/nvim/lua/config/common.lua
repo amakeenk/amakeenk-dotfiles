@@ -22,6 +22,7 @@ vim.opt.smartindent = true
 vim.opt.autoindent = true
 vim.opt.list = true
 vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣", lead = "·", }
+vim.opt.termguicolors = true
 
 vim.wo.signcolumn = "yes"
 vim.wo.linebreak = true
