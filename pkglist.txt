@@ -21,6 +21,7 @@ hyprpaper
 hyprpicker
 hyprshot
 kitty
+lazygit
 matugen
 nautilus
 neovim
