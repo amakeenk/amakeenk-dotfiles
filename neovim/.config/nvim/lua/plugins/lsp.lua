@@ -12,7 +12,6 @@ return {
 				vim.keymap.set({ "n", "v" }, "<leader>ca", vim.lsp.buf.code_action, opts)
 			end,
 		})
-
 		vim.diagnostic.config({
 			virtual_text = true,
 			signs = {
