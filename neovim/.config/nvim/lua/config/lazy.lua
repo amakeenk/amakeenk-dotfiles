@@ -40,5 +40,6 @@ require("lazy").setup({
 	require("plugins.conform"),
 	require("plugins.mason-conform"),
 	require("plugins.toggleterm"),
+	require("plugins.gitsigns"),
 	checker = { enabled = true },
 })
