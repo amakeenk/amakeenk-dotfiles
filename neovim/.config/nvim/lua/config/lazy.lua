@@ -34,6 +34,7 @@ require("lazy").setup({
 	require("plugins.bufferline"),
 	require("plugins.autopairs"),
 	require("plugins.yazi"),
+	require("plugins.indent-blankline"),
 	require("plugins.render-markdown"),
 	require("plugins.mason"),
 	require("plugins.conform"),
