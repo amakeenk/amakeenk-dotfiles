@@ -24,7 +24,7 @@ return {
 				bash = { "shfmt" },
 				kdl = { "kdlfmt" },
 			},
-			format_on_save = { timeout_ms = 500, lsp_fallback = true },
+			-- format_on_save = { timeout_ms = 500, lsp_fallback = true },
 		})
 
 		vim.keymap.set({ "n", "v" }, "<leader>cf", function()
