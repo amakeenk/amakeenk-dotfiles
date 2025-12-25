@@ -21,7 +21,7 @@ vim.opt.smarttab = true
 vim.opt.smartindent = true
 vim.opt.autoindent = true
 vim.opt.list = true
-vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣", lead = "·", }
+vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣", lead = "·" }
 vim.opt.termguicolors = true
 
 vim.wo.signcolumn = "yes"
@@ -36,4 +36,12 @@ vim.api.nvim_create_autocmd("VimEnter", {
 			end
 		end
 	end,
+})
+
+-- Auto command to show notification when file is saved
+vim.api.nvim_create_autocmd("BufWritePost", {
+	callback = function()
+		vim.notify("Файл сохранён: " .. vim.fn.expand("%:t"), "info", { title = "Сохранение" })
+	end,
+	desc = "Показывать уведомление при сохранении файла",
 })
