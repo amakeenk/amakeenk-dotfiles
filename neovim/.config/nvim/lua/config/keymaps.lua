@@ -8,6 +8,10 @@ vim.keymap.set("n", "<leader>d", vim.diagnostic.open_float, { desc = "Show line 
 
 vim.keymap.set("n", "<C-a>", "ggVG", { desc = "Select all" })
 
+-- При вставке в визуальном режиме удалять выделенное в "черную дыру" (_),
+-- чтобы сохранить текущий буфер обмена
+vim.keymap.set("x", "p", [["_dP]])
+
 vim.keymap.set("n", "Q", ":q!<CR>", { desc = "Quit current buffer without save" })
 vim.keymap.set("n", "QA", ":qa!<CR>", { desc = "Quit all buffers without save and exit" })
 vim.keymap.set("n", "W", ":w<CR>", { desc = "Save current buffer" })

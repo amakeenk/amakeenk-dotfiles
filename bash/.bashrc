@@ -118,6 +118,7 @@ alias gcl='git clone'
 alias gad='git add'
 alias gcm='git commit -m'
 alias gpo='git push origin'
+alias gfu='git fetch upstream'
 alias ggg='gad . && gcm upd && gpo'
 alias grv='git remote -v'
 alias lg='lazygit'
@@ -145,6 +146,7 @@ alias gitaltrm='ssh git.alt rm-db'
 alias gitaltls='ssh git.alt ls'
 alias gut='gear-update-tag -avc'
 alias gct='gear-create-tag'
+alias grr='gear-remotes-restore'
 alias zj='zellij'
 alias calc='_(){ awk "BEGIN{print $*}";};_'
 alias qwen='qwen -i "Отвечай всегда на русском языке."'
@@ -155,6 +157,9 @@ eval "$(zoxide init --cmd cd bash)"
 
 # for kitty
 export TERM=xterm-256color
+
+# for aikido safe chain
+export PATH=~/.npm-global/bin:$PATH
 
 # import private bashrc
 if [ -r ~/.bashrc_priv ]; then
