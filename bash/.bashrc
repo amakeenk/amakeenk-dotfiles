@@ -68,6 +68,11 @@ disapprove_revoke() {
     ssh girar task disapprove --revoke ${_task} ${_subtask}
 }
 
+acs (){
+    local pkg=$1
+    apt-cache search $pkg | rg --ignore-case $pkg
+}
+
 # yazi
 y() {
     local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
@@ -101,7 +106,6 @@ alias art='clean_old_tasks && sudo apt-repo test'
 alias arl='apt-repo list'
 alias agip='u && sudo apt-get -V install'
 alias agrp='sudo apt-get -V remove'
-alias acs='apt-cache search'
 alias acwd='apt-cache whatdepends'
 alias sstat='systemctl status'
 alias sstart='sudo systemctl start'
