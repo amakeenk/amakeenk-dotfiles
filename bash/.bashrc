@@ -6,7 +6,6 @@ fi
 export EDITOR=nvim
 
 shopt -s histappend
-PROMPT_COMMAND='history -a'
 export HISTCONTROL="ignoredups"
 shopt -s cdspell
 shopt -s cmdhist
@@ -158,6 +157,7 @@ alias qwen='qwen -i "Отвечай всегда на русском языке.
 eval "$(starship init bash)"
 eval "$(fzf --bash)"
 eval "$(zoxide init --cmd cd bash)"
+eval "$(atuin init bash)"
 
 # for kitty
 export TERM=xterm-256color
