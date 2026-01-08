@@ -1,4 +1,5 @@
 aichat
+atuin
 blueman
 bottom
 ddclight
