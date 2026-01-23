@@ -1,4 +1,5 @@
 aichat
+amberol
 atuin
 blueman
 bottom
