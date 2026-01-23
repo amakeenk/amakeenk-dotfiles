@@ -34,6 +34,7 @@ papirus-remix-icon-theme
 polkit-gnome
 pwvucontrol
 qview
+rewaita
 ripgrep
 showtime
 starship
