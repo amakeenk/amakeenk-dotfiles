@@ -112,7 +112,7 @@
 
   "pulseaudio": {
     "max-volume": 150,
-    "scroll-step": 5,
+    "scroll-step": 1,
     "format": "{icon}{volume}% \\",
     "tooltip-format": "{volume}%",
     "format-muted": " ",
