@@ -7,6 +7,7 @@
   "modules-left": ["disk", "memory", "cpu", "hyprland/window"],
   "modules-center": ["hyprland/workspaces"],
   "modules-right": [
+    "mpris",
     "custom/updates",
     "tray",
     "pulseaudio",
@@ -121,4 +122,22 @@
     },
     "on-click": "pwvucontrol",
   },
+  "mpris": {
+    "format": "{player_icon} {artist} - {title}",
+    "format-paused": "⏸ {artist} - {title}",
+    "format-stopped": "No music playing",
+    "player-icons": {
+      "default": "♪",
+      "vlc": "🎵"
+    },
+    "truncate-title-max-length": 30,
+    "truncate-artist-max-length": 20,
+    "tooltip": true,
+    "tooltip-format": "{title} - {artist}\n{album}\nState: {state}\nPosition: {position}",
+    "on-click": "playerctl play-pause",
+    "on-click-right": "playerctl next",
+    "on-click-middle": "playerctl previous",
+    "smooth-scrolling-threshold": 5,
+    "poll-interval": 1000
+  }
 }

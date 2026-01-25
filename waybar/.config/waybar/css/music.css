@@ -1,0 +1,22 @@
+#mpris {
+    font-family: "Symbols Nerd Font";
+    min-width: 100px;
+    padding: 0px 20px 0px 20px;
+    border-radius: 0px 50px 0px 50px;
+    background: @background;
+    color: @secondary;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+#mpris.playing {
+    color: @secondary;
+}
+
+#mpris.paused {
+    color: @secondary;
+}
+
+#mpris.stopped {
+    color: @secondary;
+}
