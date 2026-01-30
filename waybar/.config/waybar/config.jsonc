@@ -7,7 +7,9 @@
   "modules-left": ["disk", "memory", "cpu", "hyprland/window"],
   "modules-center": ["hyprland/workspaces"],
   "modules-right": [
+    "custom/mpris-prev",
     "mpris",
+    "custom/mpris-next",
     "custom/updates",
     "tray",
     "pulseaudio",
@@ -134,10 +136,23 @@
     "truncate-artist-max-length": 20,
     "tooltip": true,
     "tooltip-format": "{title} - {artist}\n{album}\nState: {state}\nPosition: {position}",
-    "on-click": "playerctl play-pause",
-    "on-click-right": "playerctl next",
-    "on-click-middle": "playerctl previous",
     "smooth-scrolling-threshold": 5,
     "poll-interval": 1000
+  },
+
+  "custom/mpris-prev": {
+    "exec": "~/.config/waybar/scripts/mpris_check_status.sh prev",
+    "on-click": "playerctl previous",
+    "tooltip": false,
+    "return-type": "json",
+    "interval": 1
+  },
+
+  "custom/mpris-next": {
+    "exec": "~/.config/waybar/scripts/mpris_check_status.sh next",
+    "on-click": "playerctl next",
+    "tooltip": false,
+    "return-type": "json",
+    "interval": 1
   }
 }
