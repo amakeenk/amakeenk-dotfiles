@@ -1,6 +1,7 @@
 aichat
 amberol
 atuin
+ayugram-desktop
 blueman
 bottom
 ddclight
