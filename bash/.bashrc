@@ -58,7 +58,7 @@ disapprove() {
         echo "error" >&2
         return 1
     fi
-    echo "${_msg}" | ssh girar task disapprove ${_task} ${_subtask}
+    echo -e "${_msg}" | ssh girar task disapprove ${_task} ${_subtask}
 }
 
 disapprove_revoke() {
