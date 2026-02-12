@@ -1,0 +1,6 @@
+{
+    "$schema": "https://kilo.ai/config.json",
+    "keybinds": {
+        "command_list": "alt+c"
+    }
+}
