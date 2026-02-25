@@ -3,4 +3,4 @@ description: Use when creating git commits to ensure they follow Conventional Co
 disable-model-invocation: true
 ---
 
-Invoke the superpowers:conventional-commits-helper skill and follow it exactly as presented to you
+Invoke the conventional-commits-helper skill and follow it exactly as presented to you.
