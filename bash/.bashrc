@@ -95,7 +95,6 @@ alias ll='ls -la'
 alias l='ls -l'
 alias ltree='eza -T --level '
 alias df='duf'
-alias npmu='npm -g update'
 alias u='clean_old_tasks && sudo apt-get update'
 alias ud='u && sudo apt-get -V dist-upgrade'
 alias udk='ud && sudo update-kernel && cleannodepslibs'
@@ -156,6 +155,8 @@ alias grr='gear-remotes-restore'
 alias zj='zellij'
 alias calc='_(){ awk "BEGIN{print $*}";};_'
 alias qwen='qwen -i "Отвечай всегда на русском языке."'
+alias npmu='npm -g update'
+alias npml='npm -g list'
 
 eval "$(starship init bash)"
 eval "$(fzf --bash)"
