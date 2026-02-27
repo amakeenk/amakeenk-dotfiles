@@ -11,7 +11,7 @@ shopt -s cdspell
 shopt -s cmdhist
 
 clean_old_tasks() {
-    tasks=$(apt-repo | grep 'x86_64 task' | cut -d'/' -f4)
+    tasks=$(apt-repo | grep -oP 'tasks/[^/]+/[^/]+/[^/]+/\K\d+|repo/\K\d+' | sort -u)
     for _task in ${tasks}; do
         _state="$(curl -s https://git.altlinux.org/tasks/${_task}/info.json | jq -r .state)"
         if [ "${_state}" == "EPERM" ] || [ "${_state}" == "TESTED" ]; then
