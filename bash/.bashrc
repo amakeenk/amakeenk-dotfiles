@@ -155,7 +155,7 @@ alias grr='gear-remotes-restore'
 alias zj='zellij'
 alias calc='_(){ awk "BEGIN{print $*}";};_'
 alias qwen='qwen -i "Отвечай всегда на русском языке."'
-alias npmu='npm -g update'
+alias npmu='npm -g update --verbose'
 alias npml='npm -g list'
 
 eval "$(starship init bash)"
